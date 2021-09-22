@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 10px;
+  height: 100vh;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background: linear-gradient(180deg, #1a7f72 0%, #7adbae 100%);
+}
+
+.card {
+  width: 60px;
+  height: 60px;
+  border: 1px solid gray;
+  margin: 8px 0 0 0;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(59, 11, 2, 0.7);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+#board {
+  margin: 0 auto;
+  margin-top: 30px;
+  min-width: 200px;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#controlPanel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+#scoreOutput {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.start-modal__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #1a7f72 0%, #7adbae 100%);
+}
+
+.start-modal {
+  width: 300px;
+  height: 170px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  background: linear-gradient(
+    270deg,
+    #c3eee8 26.37%,
+    rgba(195, 226, 222, 0.75) 63.87%,
+    rgba(231, 243, 242, 0.4) 103.6%
+  );
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(59, 11, 2, 0.7);
+}
+
+.start-modal h1 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.start-modal p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: 2px solid #1a7f72;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #1a7f72;
+}
+
+.hidden {
+  display: none;
+}
