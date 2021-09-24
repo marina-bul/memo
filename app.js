@@ -16,15 +16,20 @@ const images = [
   "/molodkin/sheep.jpg",
 ];
 
-const modal = document.querySelector("#modal");
+const modalContainer = document.querySelector("#modal");
+const modal = document.querySelector(".start-modal");
 const startGameButton = document.querySelector("#startGame");
 const reStartGameButton = document.querySelector("#reStartGame");
 const board = document.querySelector("#board");
 const score = document.querySelector("#atemptNumOutput");
 const manager = new GameManager(images, board, score);
 
+window.onload = function () {
+  modal.style.transform = "scale(2)";
+};
+
 startGameButton.addEventListener("click", () => {
-  modal.classList.add("hidden");
+  modalContainer.classList.add("hidden");
   manager.startGame();
 });
 
