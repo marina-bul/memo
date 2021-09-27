@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5b8895b9e3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,28 +21,31 @@
 
     </div>
 
-    <div class="start-modal__wrapper" id="modal">
-        <div class="start-modal">
+    <div class="modal-window__wrapper" id="modal">
+        <button class="copyright-btn" id="openCopyright"><i class="fas fa-question-circle"></i></button>
+        <div class="modal-window start">
             <h1>Таинственный лес</h1>
             <button class="btn" id="startGame">Начать игру</button>
             <p>Собирай пары из двух одинаковых картинок</p>
-
+        </div>
+        <div class="modal-window copyright hidden">
+            <button class="close-modal" id="closeModal"><i class="fas fa-times"></i></button>
+            <p>Художник:<br /> Молодкин Кирилл
+                <a href="https://www.instagram.com/molodkin_kirill/"><i class="fab fa-instagram-square"></i></a>
+            </p>
+            <p>Фоновое изображение взято с сайта: 
+                <a href="https://www.freepik.com/vectors/background">www.freepik.com</a>
+            </p>
         </div>
     </div>
 
     <footer>
-        <h3>Информация об авторах</h3>
-        <div class="copyright">
-            <p>Использован фон: 
-                <a href="https://www.freepik.com/vectors/background">www.freepik.com</a>
-            </p> 
-            <p>Художник: 
-                <a href="https://www.instagram.com/molodkin_kirill/">Молодкин Кирилл</a>
-            </p>
-            <p>Разработчик сайта: 
-                <a href="https://vk.com/id29781961">Буланова Марина</a>
-            </p>
-        </div>
+            <p>Разработчик сайта: Буланова Марина</p>
+            <div class="socials">
+                <a href="https://vk.com/id29781961"><i class="fab fa-vk"></i></a>
+                <a href="https://www.instagram.com/mary_bulan90/"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/marina-bul"><i class="fab fa-github"></i></a>
+            </div>
     </footer>
     <script src="/card.js"></script>
     <script src="/deck.js"></script>

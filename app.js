@@ -17,9 +17,12 @@ const images = [
 ];
 
 const modalContainer = document.querySelector("#modal");
-const modal = document.querySelector(".start-modal");
+const modal = document.querySelector(".start");
 const startGameButton = document.querySelector("#startGame");
 const reStartGameButton = document.querySelector("#reStartGame");
+const closeCopyrightWindow = document.querySelector("#closeModal");
+const openCopyrightWindow = document.querySelector("#openCopyright");
+const copyrightModal = document.querySelector(".copyright");
 const board = document.querySelector("#board");
 const score = document.querySelector("#atemptNumOutput");
 const manager = new GameManager(images, board, score);
@@ -31,6 +34,16 @@ window.onload = function () {
 startGameButton.addEventListener("click", () => {
   modalContainer.classList.add("hidden");
   manager.startGame();
+});
+
+openCopyrightWindow.addEventListener("click", () => {
+  copyrightModal.classList.remove("hidden");
+  modal.classList.add("hidden");
+});
+
+closeCopyrightWindow.addEventListener("click", () => {
+  copyrightModal.classList.add("hidden");
+  modal.classList.remove("hidden");
 });
 
 reStartGameButton.addEventListener("click", () => {

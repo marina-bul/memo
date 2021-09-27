@@ -90,7 +90,7 @@ body {
   font-weight: bold;
 }
 
-.start-modal__wrapper {
+.modal-window__wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -105,7 +105,7 @@ body {
   background-size: cover;
 }
 
-.start-modal {
+.modal-window {
   width: 200px;
   height: 100px;
   padding: 10px;
@@ -126,29 +126,80 @@ body {
   transition: all 0.8s linear 0.5s;
 }
 
-.start-modal h1 {
+.start h1 {
   margin-bottom: 5px;
   font-size: 16px;
 }
 
-.start-modal p {
+.start p {
   margin-bottom: 5px;
   font-size: 9px;
   font-style: italic;
 }
 
 @media (max-width: 767px) {
-  .start-modal {
+  .start {
     width: 150px;
     height: 75px;
   }
 
-  .start-modal h1 {
+  .start h1 {
     font-size: 13px;
   }
 
-  .start-modal p {
+  .start p {
     font-size: 7px;
+  }
+}
+
+.copyright {
+  width: 300px;
+  height: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  background: linear-gradient(
+    270deg,
+    #c3eee8 26.37%,
+    rgba(195, 226, 222, 0.75) 63.87%,
+    rgba(231, 243, 242, 0.4) 103.6%
+  );
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(59, 11, 2, 0.7);
+}
+
+.copyright p:first-of-type {
+  margin-bottom: 15px;
+}
+
+.copyright a {
+  color: #000;
+}
+
+.copyright i {
+  color: #115249;
+  font-size: 20px;
+}
+
+.close-modal {
+  margin-left: 290px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 360px) {
+  .copyright {
+    width: 200px;
+  }
+
+  .close-modal {
+    margin-left: 190px;
   }
 }
 
@@ -166,20 +217,33 @@ body {
   background-color: #1a7f72;
 }
 
+#reStartGame {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.copyright-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.copyright-btn i {
+  font-size: 40px;
+  color: #fff;
+}
+
 footer {
-  height: 50px;
-  text-align: center;
-  overflow: hidden;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background: linear-gradient(180deg, #1a7f72 0%, #7adbae 100%);
   z-index: 1;
-}
-
-footer:hover {
-  height: auto;
-}
-
-footer h3 {
-  display: none;
 }
 
 footer a {
@@ -187,16 +251,18 @@ footer a {
   text-decoration: none;
 }
 
-.copyright {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+footer p {
+  line-height: 36px;
+}
+
+.socials i {
+  font-size: 24px;
+  margin-right: 10px;
 }
 
 @media (max-width: 767px) {
-  footer h3 {
-    padding: 10px;
-    display: block;
+  footer {
+    flex-direction: column;
   }
 }
 
